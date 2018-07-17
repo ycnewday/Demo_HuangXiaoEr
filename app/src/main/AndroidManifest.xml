@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lenovo.xiangmu0705">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 二维码扫描 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    //图片上传
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    //地图SDK（包含其搜索功能）需要的基础权限
+
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- bugly -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <permission
+        android:name="com.example.lenovo.xiangmu0705.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+         
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+      
+     
+    <uses-permission android:name="com.example.lenovo.xiangmu0705.permission.JPUSH_MESSAGE" />
+     
+      
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+       
+    <uses-permission android:name="android.permission.INTERNET" />
+       
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+       
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+       
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+     
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+       
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+       
+    <uses-permission android:name="android.permission.VIBRATE" />
+       
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+       
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+       
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 必须的权限 -->
+    <application
+        android:name=".http.MyApi"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- <meta-data android:name="UMENG_APPKEY" android:value="5b489522f29d987d61000132"/> -->
+        <activity android:name=".welcome.WelcomeAct">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.MainActivity" />
+        <activity android:name=".welcome.GuideActivity" />
+        <activity android:name=".view.denglu.DengLuActivity" />
+        <activity android:name=".qrcode.CaptureActivity" />
+        <activity android:name=".qrcode.ResultActivity" />
+        <activity android:name=".view.wode.PersonInfoActivity" />
+        <activity android:name=".view.saomiao.shangjia.DetailActivity" />
+        <activity android:name=".view.yuyue.SouSuoActivity" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="921c85991d8cda5e9e12bb9b3bcac844" />
+
+        <activity android:name=".view.yuyue.DiTuActivity" />
+        <activity android:name=".view.saomiao.fenlei.FenLeiActivity" />
+
+        <!-- Rich push 核心功能 since 2.0.6 -->
+               
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle">
+                   
+        </activity>
+               
+        <!-- Required SDK核心功能 -->
+               
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+                       
+            <intent-filter>
+                               
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                               
+                <category android:name="android.intent.category.DEFAULT" />
+                               
+                <category android:name="com.example.lenovo.xiangmu0705" />
+                           
+            </intent-filter>
+                   
+        </activity>
+               
+        <!-- Required SDK 核心功能 -->
+               
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+               
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult">
+                       
+            <intent-filter>
+                               
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                               
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                               
+                <action android:name="cn.jpush.android.intent.PushService" />
+                               
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+                           
+            </intent-filter>
+                   
+        </service>
+               
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+               
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.example.lenovo.xiangmu0705.DataProvider"
+            android:exported="false" />
+        <!-- since 3.1.0 Required SDK 核心功能 -->
+               
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.example.lenovo.xiangmu0705.DownloadProvider"
+            android:exported="true" />
+               
+        <!-- Required SDK核心功能 -->
+               
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+                       
+            <intent-filter android:priority="1000">
+                               
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                  
+                <!-- Required  显示通知栏 -->
+                               
+                <category android:name="com.example.lenovo.xiangmu0705" />
+                           
+            </intent-filter>
+                       
+            <intent-filter>
+                               
+                <action android:name="android.intent.action.USER_PRESENT" />
+                               
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                           
+            </intent-filter>
+                       
+            <!-- Optional -->
+                       
+            <intent-filter>
+                               
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                               
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                               
+                <data android:scheme="package" />
+                           
+            </intent-filter>
+                   
+        </receiver>
+               
+        <!-- Required SDK核心功能 -->
+               
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+        <!-- Required  . Enable it you can get statistics data with channel -->
+               
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+               
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="5bedb4a5904de1f6201c1ddc" /> <!--   </>值来自开发者平台取得的AppKey -->
+
+        <activity android:name=".view.wode.SetUpActivity"></activity>
+    </application>
+
+</manifest>

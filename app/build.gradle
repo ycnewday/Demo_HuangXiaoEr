@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.example.lenovo.xiangmu0705"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        ndk {
+//            // 设置支持的SO库架构
+//            abiFilters 'armeabi' , 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+//        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //RecyclerView
+
+    //Fresco（图片加载）
+
+    //greendao两个依赖
+    compile files('libs/zxing.jar')
+    compile files('libs/Amap_2DMap_V5.2.0_20170627.jar')
+    compile files('libs/AMap_Location_V4.0.0_20180423.jar')
+    compile files('libs/AMap_Search_V6.1.0_20180330.jar')
+    //bugly的集成
+    compile files('libs/jpush-android-3.1.2.jar')
+    compile files('libs/jcore-android-1.2.0.jar')
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    compile 'com.hjm:BottomTabBar:1.1.1'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.android.support:recyclerview-v7:25.2.0'
+    compile 'com.jcodecraeer:xrecyclerview:1.5.9'
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'org.greenrobot:eventbus:3.1.1'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'org.greenrobot:greendao:3.2.2'
+    compile 'net.zetetic:android-database-sqlcipher:3.5.7@aar'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+}
+greendao {
+    schemaVersion 1
+    daoPackage 'com.example.lenovo.xiangmu0705.dao'
+    //自己的包名.dao
+    targetGenDir 'src/main/java'
+}
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.2.0'
+            }
+        }
+    }
+}

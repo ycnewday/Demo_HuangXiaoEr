@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8">
+
+   <LinearLayout
+       android:padding="10dp"
+       android:background="#ffe900"
+       android:layout_width="match_parent"
+       android:layout_height="150dp"
+       android:orientation="vertical">
+       <LinearLayout
+           android:layout_marginTop="30dp"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="40dp">
+           <com.amap.api.maps2d.MapView
+
+               android:visibility="gone"
+               android:id="@+id/yuyue_map"
+
+               android:layout_width="1dp"
+
+               android:layout_height="1dp"/>
+           <ImageView
+               android:id="@+id/yuyue_dingwei"
+               android:layout_width="20dp"
+               android:layout_height="20dp"
+               android:src="@mipmap/yuyue_dingwei"/>
+           <TextView
+               android:textSize="20dp"
+               android:text="请点击获取当前位置"
+               android:textColor="#ffffff"
+               android:id="@+id/yuyue_weizhi"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+           <ImageView
+               android:layout_width="10dp"
+               android:layout_height="10dp"
+               android:src="@mipmap/yuyue_xiala"/>
+       </LinearLayout>
+       <LinearLayout
+           android:id="@+id/my_yuyue"
+           android:layout_marginTop="5dp"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="30dp">
+          <com.example.lenovo.xiangmu0705.view.yuyue.MySearchView
+              android:id="@+id/yuyue_search"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              ></com.example.lenovo.xiangmu0705.view.yuyue.MySearchView>
+           </LinearLayout>
+   </LinearLayout>
+         <TextView
+             android:padding="5dp"
+             android:text="附近的商家"
+             android:layout_width="match_parent"
+             android:layout_height="30dp" />
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:padding="5dp"
+        android:id="@+id/yuyue_xrecy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+</LinearLayout>

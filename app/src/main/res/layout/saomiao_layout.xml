@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/saomiao_biaoge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/biaoge_caidan"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:textSize="35dp"
+            android:text="知青居"
+            android:gravity="center_horizontal"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/saoma"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/saomiao"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+    <com.example.lenovo.xiangmu0705.view.saomiao.MyBanner
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/banner"></com.example.lenovo.xiangmu0705.view.saomiao.MyBanner>
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:textSize="20px"
+         android:text="--------------为你推荐----------------"
+         android:gravity="center_horizontal"/>
+     <android.support.v7.widget.RecyclerView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/xiarecy"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f8f8f8"
+    tools:context="com.example.lenovo.xiangmu0705.view.wode.SetUpActivity">
+
+    <LinearLayout
+        android:background="#ffec01"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:background="#ffffff"
+            android:src="@mipmap/fanhui"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:text="设置"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+     <LinearLayout
+         android:layout_marginTop="5dp"
+         android:padding="5dp"
+         android:background="#ffffff"
+         android:orientation="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="150dp">
+
+         <TextView
+             android:layout_marginTop="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="通用"/>
+         <LinearLayout
+             android:layout_marginTop="10dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+             <TextView
+                 android:layout_weight="7"
+                 android:layout_width="0dp"
+                 android:layout_height="30dp"
+                 android:text="清除图片缓存"/>
+             <TextView
+                 android:text="0MB"
+                 android:id="@+id/qing_huancun"
+                 android:layout_weight="1"
+                 android:layout_width="0dp"
+                 android:layout_height="30dp" />
+         </LinearLayout>
+         <LinearLayout
+             android:layout_marginTop="10dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+             <TextView
+                 android:layout_weight="7"
+                 android:layout_width="0dp"
+                 android:layout_height="30dp"
+                 android:text="非WIFI图片质量"/>
+             <TextView
+                 android:text="高清"
+                 android:layout_weight="1"
+                 android:layout_width="0dp"
+                 android:layout_height="30dp" />
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_marginTop="10dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+             <TextView
+                 android:layout_weight="7"
+                 android:layout_width="0dp"
+                 android:layout_height="30dp"
+                 android:text="消息推送"/>
+             <TextView
+                 android:text="开"
+                 android:layout_weight="1"
+                 android:layout_width="0dp"
+                 android:layout_height="30dp" />
+         </LinearLayout>
+     </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开发"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="自动下载更新包"/>
+            <TextView
+                android:text="仅限WI-FI网络"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="关于黄小二"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@mipmap/wozhan" />
+        </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

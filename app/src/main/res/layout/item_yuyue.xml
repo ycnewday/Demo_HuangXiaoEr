@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:id="@+id/yuyue_pic"
+            fresco:placeholderImage="@mipmap/ic_launcher"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="知青居（北苑餐厅三楼）"
+                android:id="@+id/yuyue_title"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text="知青居（北苑餐厅三楼）"
+                android:id="@+id/yuyue_yueshou"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text="知青居（北苑餐厅三楼）"
+                android:id="@+id/yuyue_qian"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/yuyue_xuanzhong"
+                android:id="@+id/yueyu_xuan"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

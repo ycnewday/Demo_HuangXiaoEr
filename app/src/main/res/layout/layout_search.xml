@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_bg"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:layout_width="@dimen/search_height"
+        android:layout_height="@dimen/search_height"
+        android:src="@mipmap/yuyue_sousuo" />
+       
+
+    <EditText
+        android:hint="搜索店铺，菜品名称"
+        android:id="@+id/search_content"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/search_height"
+        android:layout_weight="1"
+        android:background="@null" />
+       
+</LinearLayout>

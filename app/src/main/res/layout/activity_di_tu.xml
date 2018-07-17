@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lenovo.xiangmu0705.view.yuyue.DiTuActivity">
+    
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:id="@+id/fanhui"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/fanhui"
+            android:layout_width="10dp"
+            android:layout_height="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="地图"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+    
+    <com.amap.api.maps2d.MapView
+
+        android:id="@+id/map"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.lenovo.xiangmu0705.view.yuyue.SouSuoActivity">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:background="#ffff00"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <com.example.lenovo.xiangmu0705.view.yuyue.MySearchView
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:id="@+id/sousuo_search"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            ></com.example.lenovo.xiangmu0705.view.yuyue.MySearchView>
+        <TextView
+            android:gravity="center_vertical"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="| 搜素"
+            android:textSize="20sp"
+            android:id="@+id/yuyue_sousuo"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/sousuo_recy"></android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="去结算"
+            android:id="@+id/jiesuan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

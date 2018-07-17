@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.lenovo.xiangmu0705.view.denglu.DengLuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@mipmap/jianbian">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@mipmap/denglulogo"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="手机号" />
+
+    <LinearLayout
+        android:id="@+id/pass_s1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/pwd"
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码" />
+        <ToggleButton
+            android:textOff=""
+            android:textOn=""
+            android:id="@+id/mima_ss"
+            android:background="@mipmap/xianmi"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/duan_s1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <EditText
+        android:id="@+id/duanma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入短信验证码"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:gravity="center"
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/login_gaibian"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用短信验证"/>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <Button
+           android:layout_alignParentBottom="true"
+           android:background="@drawable/umeng_socialize_qq"
+           android:id="@+id/qqLogin"
+           android:layout_marginLeft="150dp"
+           android:layout_width="40dp"
+           android:layout_height="40dp" />
+       <Button
+           android:layout_alignParentBottom="true"
+           android:layout_toRightOf="@id/qqLogin"
+           android:background="@drawable/umeng_socialize_wechat"
+           android:id="@+id/weixinLogin"
+           android:layout_marginLeft="30dp"
+           android:layout_width="40dp"
+           android:layout_height="40dp" />
+   </RelativeLayout>
+</LinearLayout>
